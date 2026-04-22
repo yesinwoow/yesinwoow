@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #0d1117, #161b22);
+  color: #c9d1d9;
+  line-height: 1.6;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========== NAVBAR =========== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 50px;
+
+  background: rgba(13, 17, 23, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(48, 54, 61, 0.5);
+}
+
+/* LINKS */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links li a {
+  position: relative;
+  text-decoration: none;
+  color: #c9d1d9;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+/* hover effect */
+.nav-links li a:hover {
+  color: #58a6ff;
+}
+
+/* underline animation */
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: #58a6ff;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+/* =========== profile =========== */
+.profile {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 3px solid #58a6ff;
+  padding: 4px;
+
+  box-shadow: 0 0 20px rgba(88, 166, 255, 0.4);
+  transition: 0.3s;
+}
+
+.profile img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(88, 166, 255, 0.7);
+}
+
+/* =========== SECTION =========== */
+section {
+  padding: 10px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #f0f6fc;
+}
+
+
+/* =========== HERO =========== */
+.hero {
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  align-items: flex-start;
+  padding-top: 60px;
+}
+
+.hero h2 {
+  font-size: 3rem;
+}
+
+.hero span {
+  color: #58a6ff;
+}
+
+.hero-desc {
+  margin-top: 15px;
+  max-width: 700px;
+  color: #8b949e;
+  font-size: 1rem;
+}
+
+/* =========== CARDS =========== */
+.card {
+  position: relative;
+  background: linear-gradient(145deg, #0d1117, #111827);
+  border: 1px solid rgba(88, 166, 255, 0.12);
+  border-radius: 12px;
+
+  padding: 16px;   /* 👈 smaller padding (important fix) */
+  transition: all 0.25s ease;
+
+  overflow: hidden;
+}
+
+/* hover */
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #58a6ff;
+  box-shadow: 0 10px 20px rgba(88, 166, 255, 0.12);
+}
+
+.card h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+  color: #f0f6fc;
+}
+
+.card p {
+  font-size: 0.85rem;
+  color: #8b949e;
+  line-height: 1.4;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+/* =========== SKILLS =========== */
+#skills .card {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* =========== SOCIAL =========== */
+.social {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+
+  border: 1px solid #30363d;
+  border-radius: 50%;
+
+  color: #c9d1d9;
+  font-size: 18px;
+
+  transition: 0.3s;
+}
+
+.social a:hover {
+  color: #58a6ff;
+  border-color: #58a6ff;
+  box-shadow: 0 0 10px rgba(88, 166, 255, 0.5);
+  transform: translateY(-3px);
+}
+
+/* =========== FOOTER =========== */
+footer {
+  text-align: center;
+  padding: 25px;
+  border-top: 1px solid #30363d;
+  background: #0d1117;
+  color: #8b949e;
+  margin-top: 40px;
+}
+
+/* =========== RESPONSIVE =========== */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+}
