@@ -28,7 +28,7 @@
 ## 🚀 Live Website
 
 <p align="center">
-  <a href="https://yesinwoow.github.io/Social-media/" target="_blank">
+  <a href="https://yesinwoow.github.io/yesinwoow/" target="_blank">
     <img src="https://img.shields.io/badge/🚀%20Launch%20App-00C853?style=for-the-badge&logo=google-chrome&logoColor=white"/>
   </a>
 </p>
