@@ -92,6 +92,81 @@ html {
   transform: scale(1.05);
   box-shadow: 0 0 30px rgba(88, 166, 255, 0.7);
 }
+/* ABOUT LAYOUT */
+.about-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* TEXT SIDE */
+.about-text h3 {
+  margin-bottom: 10px;
+  color: #f0f6fc;
+}
+
+.about-text p {
+  color: #8b949e;
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+/* HIGHLIGHT WORDS */
+.highlight {
+  color: #58a6ff;
+  font-weight: 500;
+}
+
+/* TAGS */
+.about-tags {
+  margin-top: 20px;
+}
+
+.about-tags span {
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 5px;
+
+  font-size: 0.75rem;
+  border-radius: 20px;
+
+  background: rgba(88, 166, 255, 0.1);
+  border: 1px solid rgba(88, 166, 255, 0.2);
+  color: #58a6ff;
+}
+
+/* RIGHT CARD */
+.about-card {
+  background: linear-gradient(145deg, #0d1117, #161b22);
+  border: 1px solid rgba(88, 166, 255, 0.15);
+
+  padding: 20px;
+  border-radius: 14px;
+
+  transition: 0.3s;
+}
+
+.about-card:hover {
+  border-color: #58a6ff;
+  box-shadow: 0 10px 25px rgba(88, 166, 255, 0.1);
+}
+
+.about-card h3 {
+  margin-bottom: 10px;
+  color: #f0f6fc;
+}
+
+.about-card p {
+  color: #8b949e;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* =========== SECTION =========== */
 section {
@@ -172,11 +247,63 @@ h2 {
 }
 
 /* =========== SKILLS =========== */
-#skills .card {
-  text-align: center;
-  font-size: 1.1rem;
+/* SKILLS GRID */
+/* SKILLS GRID */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 15px;
+  margin-top: 30px;
 }
 
+/* CARD */
+.skill-box {
+  background: linear-gradient(145deg, #0d1117, #161b22);
+  border: 1px solid rgba(88, 166, 255, 0.15);
+
+  border-radius: 14px;
+  padding: 18px 8px;
+
+  text-align: center;
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+/* ICON */
+.skill-box i {
+  font-size: 26px;
+  margin-bottom: 8px;
+  transition: 0.25s;
+}
+
+/* TEXT */
+.skill-box p {
+  font-size: 0.8rem;
+  color: #c9d1d9;
+}
+
+/* 🔥 HOVER → SMALL + CLEAN */
+.skill-box:hover {
+  transform: scale(0.92);   /* 👈 ছোট হবে */
+  border-color: #58a6ff;
+}
+
+/* ICON hover */
+.skill-box:hover i {
+  transform: scale(1.15);
+}
+.fa-html5 { color: #e34c26; }
+.fa-css3-alt { color: #264de4; }
+.fa-js { color: #f0db4f; }
+.fa-python { color: #3776ab; }
+.fa-git-alt { color: #f1502f; }
+.fa-github { color: #c9d1d9; }
+.fa-node-js { color: #3c873a; }
+.fa-database { color: #f29111; }
+.fa-mobile-alt { color: #58a6ff; }
+.fa-paint-brush { color: #ff7b72; }
+.fa-terminal { color: #00ff9c; }
 /* =========== SOCIAL =========== */
 .social {
   text-align: center;
