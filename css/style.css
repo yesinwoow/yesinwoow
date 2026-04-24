@@ -209,46 +209,90 @@ h2 {
   font-size: 1rem;
 }
 
-/* =========== CARDS =========== */
-.card {
-  position: relative;
-  background: linear-gradient(145deg, #0d1117, #111827);
-  border: 1px solid rgba(88, 166, 255, 0.12);
-  border-radius: 12px;
+/* =========== PROJECT CARDS =========== */
+/* PROJECT GRID */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
 
-  padding: 16px;   /* 👈 smaller padding (important fix) */
-  transition: all 0.25s ease;
+/* CARD */
+.project-card {
+  position: relative;
+  background: linear-gradient(145deg, #0d1117, #161b22);
+  border: 1px solid rgba(88, 166, 255, 0.15);
+
+  border-radius: 14px;
+  padding: 20px;
 
   overflow: hidden;
+  transition: 0.3s;
 }
 
-/* hover */
-.card:hover {
+/* CONTENT */
+.project-content h3 {
+  color: #f0f6fc;
+  margin-bottom: 8px;
+}
+
+.project-content p {
+  color: #8b949e;
+  font-size: 0.9rem;
+}
+
+/* HOVER EFFECT */
+.project-card:hover {
   transform: translateY(-6px);
   border-color: #58a6ff;
-  box-shadow: 0 10px 20px rgba(88, 166, 255, 0.12);
+  box-shadow: 0 10px 25px rgba(88, 166, 255, 0.1);
 }
 
-.card h3 {
-  font-size: 1rem;
-  margin-bottom: 6px;
-  color: #f0f6fc;
+/* LINKS (hidden by default) */
+.project-links {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+
+  transition: 0.3s;
 }
 
-.card p {
-  font-size: 0.85rem;
-  color: #8b949e;
-  line-height: 1.4;
-}
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 14px;
+/* SHOW LINKS ON HOVER */
+.project-card:hover .project-links {
+  bottom: 15px;
 }
 
+/* ICON BUTTON */
+.project-links a {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  border: 1px solid #30363d;
+
+  color: #c9d1d9;
+  font-size: 16px;
+
+  background: #0d1117;
+  transition: 0.3s;
+}
+
+.project-links a:hover {
+  color: #58a6ff;
+  border-color: #58a6ff;
+  box-shadow: 0 0 10px rgba(88, 166, 255, 0.5);
+}
 /* =========== SKILLS =========== */
-/* SKILLS GRID */
-/* SKILLS GRID */
 .skills {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
