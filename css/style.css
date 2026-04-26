@@ -75,19 +75,12 @@
       border-bottom: 1px solid var(--border);
     }
 
-    .nav-logo {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.9rem;
-      color: var(--accent);
-      letter-spacing: 2px;
-    }
-
     .nav-logo span { color: var(--muted); }
 
     .nav-links {
       display: flex;
       list-style: none;
-      gap: 35px;
+      gap: 10px;
     }
 
     .nav-links a {
