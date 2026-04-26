@@ -3,225 +3,257 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yasin Portfolio</title>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
+  <title>Yasin Arafat — Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="nav.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+<!-- GLOW ORBS -->
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
 
 <!-- NAVBAR -->
-<nav class="navbar">
+<nav>
   <ul class="nav-links">
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
+<main>
+
 <!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-content">
-    <div class="profile">
-  <img src="images/profile.png" alt="Yasin Arafat">
-</div>
-    <h2>Hi, I'm <span>Yasin Arafat</span></h2>
+<section id="home" style="position:relative;">
+  <div class="hero-badge">
+    <span class="dot"></span>
+    Available for opportunities
+  </div>
+
+  <div class="avatar-wrap">
+    <div class="avatar-ring"></div>
+    <div class="avatar-ring-inner"></div>
+    <img src="images/profile.png" alt="Yasin Arafat" onerror="this.style.background='linear-gradient(135deg,#38bdf8,#818cf8)';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='3rem';this.removeAttribute('onerror')">
+  </div>
+
+  <h1 class="hero-name">
+    Yesin <span class="accent">Arafat</span>
+  </h1>
+
+  <p class="hero-title">Frontend Developer &nbsp;/&nbsp; Full-Stack Learner</p>
+
+  <p class="hero-desc">
+    I build modern, responsive web experiences with clean code and thoughtful design — turning ideas into real digital products.
+  </p>
+
+  <div class="hero-cta">
+    <a href="#projects" class="btn btn-primary">
+      <i class="fas fa-folder-open"></i> View Projects
+    </a>
+    <a href="#contact" class="btn btn-ghost">
+      <i class="fas fa-paper-plane"></i> Get in Touch
+    </a>
+  </div>
+
+  <div class="scroll-hint">
+
+    <div class="scroll-line"></div>
   </div>
 </section>
+
+<!-- DIVIDER -->
+<div class="section-divider"><div class="divider-line"></div></div>
 
 <!-- ABOUT -->
 <section id="about">
-  <h2>About Me</h2>
+  <div class="section">
+    <div class="section-label reveal">About</div>
+    <h2 class="section-title reveal">Who I Am</h2>
 
-  <div class="about-container">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+          I'm a <span class="hl">self-taught web developer</span> passionate about building modern, responsive, and user-focused websites. I transform ideas into real digital experiences using <span class="hl2">clean code</span> and thoughtful design.
+        </p>
+        <p>
+          My journey started with curiosity and evolved into a strong focus on <span class="hl">frontend development</span>. I constantly learn new technologies and focus on writing scalable, maintainable code.
+        </p>
+        <p>
+          Currently working towards becoming a <span class="hl3">full-stack developer</span> — building meaningful products that solve real-world problems.
+        </p>
+        <div class="about-tags">
+          <span class="tag">Frontend</span>
+          <span class="tag">Responsive Design</span>
+          <span class="tag">Clean Code</span>
+          <span class="tag">Problem Solving</span>
+          <span class="tag">UI Design</span>
+        </div>
+      </div>
 
-    <!-- LEFT SIDE -->
-    <div class="about-text">
-      <h3>Who I Am</h3>
+      <div>
+        <div class="about-stats reveal">
+          <div class="stat-card">
+            <span class="num">2+</span>
+            <span class="label">Years Learning</span>
+          </div>
+          <div class="stat-card">
+            <span class="num">10+</span>
+            <span class="label">Skills</span>
+          </div>
+          <div class="stat-card">
+            <span class="num">5+</span>
+            <span class="label">Projects</span>
+          </div>
+          <div class="stat-card">
+            <span class="num">∞</span>
+            <span class="label">Curiosity</span>
+          </div>
+        </div>
 
-      <p>
-        I’m a <span class="highlight">self-taught web developer</span> who loves building 
-        modern, responsive, and user-focused websites. I enjoy transforming ideas into 
-        real digital experiences using <span class="highlight">clean code</span> and 
-        thoughtful design.
-      </p>
-
-      <p>
-        My journey started with curiosity and has grown into a strong passion for 
-        <span class="highlight">frontend development</span> and continuously learning new technologies. 
-        I focus on writing scalable code and creating smooth user experiences.
-      </p>
-
-      <p>
-        Currently, I’m working towards becoming a 
-        <span class="highlight">full-stack developer</span> and building meaningful 
-        products that solve real-world problems.
-      </p>
-
-      <!-- TAGS -->
-      <div class="about-tags">
-        <span>Frontend</span>
-        <span>Responsive Design</span>
-        <span>Clean Code</span>
-        <span>Problem Solving</span>
+        <div class="about-info reveal" style="margin-top:16px;">
+          <h3>🎯 Current Goal</h3>
+          <p>Become a professional full-stack developer and build impactful digital products that combine performance, great design, and real usability.</p>
+        </div>
       </div>
     </div>
-
-    <!-- RIGHT SIDE -->
-    <div class="about-card">
-      <h3>Goal</h3>
-      <p>
-        My goal is to become a professional developer and create impactful digital 
-        products that combine performance, design, and usability.
-      </p>
-    </div>
-
   </div>
 </section>
+
+<!-- DIVIDER -->
+<div class="section-divider"><div class="divider-line"></div></div>
 
 <!-- PROJECTS -->
 <section id="projects">
-  <h2>Projects</h2>
+  <div class="section">
+    <div class="section-label reveal">Work</div>
+    <h2 class="section-title reveal">Projects</h2>
 
-  <div class="projects">
+    <div class="projects-grid">
 
-    <!-- PROJECT 1 -->
-    <div class="project-card">
-      <div class="project-content">
+      <div class="project-card reveal">
+        <div class="project-icon">
+          <i class="fas fa-user-circle"></i>
+        </div>
         <h3>Portfolio Website</h3>
-        <p>Modern animated personal portfolio with responsive design.</p>
+        <div class="project-stack">
+          <span class="stack-tag">HTML</span>
+          <span class="stack-tag">CSS</span>
+          <span class="stack-tag">JavaScript</span>
+        </div>
+        <p>Modern animated personal portfolio with smooth transitions, responsive layout, and glassmorphism design.</p>
+        <div class="project-links">
+          <a href="#" target="_blank"><i class="fas fa-eye"></i> Live</a>
+          <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+        </div>
       </div>
 
-      <div class="project-links">
-        <a href="#" target="_blank"><i class="fas fa-eye"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-      </div>
-    </div>
-
-    <!-- PROJECT 2 -->
-    <div class="project-card">
-      <div class="project-content">
+      <div class="project-card reveal">
+        <div class="project-icon">
+          <i class="fas fa-sticky-note"></i>
+        </div>
         <h3>Note App</h3>
-        <p>Custom note-taking app with local storage support.</p>
+        <div class="project-stack">
+          <span class="stack-tag">JavaScript</span>
+          <span class="stack-tag">LocalStorage</span>
+          <span class="stack-tag">CSS</span>
+        </div>
+        <p>Custom note-taking app with local storage support, edit/delete functionality, and clean minimal UI.</p>
+        <div class="project-links">
+          <a href="#" target="_blank"><i class="fas fa-eye"></i> Live</a>
+          <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+        </div>
       </div>
 
-      <div class="project-links">
-        <a href="#" target="_blank"><i class="fas fa-eye"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+      <!-- Placeholder card for more projects -->
+      <div class="project-card reveal" style="border-style: dashed; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; min-height:250px;">
+        <div class="project-icon" style="margin:0 auto 16px;">
+          <i class="fas fa-plus"></i>
+        </div>
+        <h3 style="color:var(--muted);">More Coming Soon</h3>
+        <p>Currently building new projects. Stay tuned!</p>
       </div>
+
     </div>
-
   </div>
 </section>
+
+<!-- DIVIDER -->
+<div class="section-divider"><div class="divider-line"></div></div>
 
 <!-- SKILLS -->
 <section id="skills">
-  <h2>Skills</h2>
+  <div class="section">
+    <div class="section-label reveal">Stack</div>
+    <h2 class="section-title reveal">Skills & Tools</h2>
 
-  <div class="skills">
-
-    <div class="skill-box">
-      <i class="fab fa-html5"></i>
-      <p>HTML</p>
+    <div class="skills-grid">
+      <div class="skill-box reveal" style="--skill-color:#e34c26"><i class="fab fa-html5"></i><p>HTML</p></div>
+      <div class="skill-box reveal" style="--skill-color:#264de4"><i class="fab fa-css3-alt"></i><p>CSS</p></div>
+      <div class="skill-box reveal" style="--skill-color:#f0db4f"><i class="fab fa-js"></i><p>JavaScript</p></div>
+      <div class="skill-box reveal" style="--skill-color:#3776ab"><i class="fab fa-python"></i><p>Python</p></div>
+      <div class="skill-box reveal" style="--skill-color:#f1502f"><i class="fab fa-git-alt"></i><p>Git</p></div>
+      <div class="skill-box reveal" style="--skill-color:#c9d1d9"><i class="fab fa-github"></i><p>GitHub</p></div>
+      <div class="skill-box reveal" style="--skill-color:#3c873a"><i class="fab fa-node-js"></i><p>Node.js</p></div>
+      <div class="skill-box reveal" style="--skill-color:#f29111"><i class="fas fa-database"></i><p>Database</p></div>
+      <div class="skill-box reveal" style="--skill-color:#818cf8"><i class="fas fa-code"></i><p>Coding</p></div>
+      <div class="skill-box reveal" style="--skill-color:#38bdf8"><i class="fas fa-mobile-alt"></i><p>Responsive</p></div>
+      <div class="skill-box reveal" style="--skill-color:#ff7b72"><i class="fas fa-paint-brush"></i><p>UI Design</p></div>
+      <div class="skill-box reveal" style="--skill-color:#34d399"><i class="fas fa-terminal"></i><p>Terminal</p></div>
     </div>
-
-    <div class="skill-box">
-      <i class="fab fa-css3-alt"></i>
-      <p>CSS</p>
-    </div>
-
-    <div class="skill-box">
-      <i class="fab fa-js"></i>
-      <p>JavaScript</p>
-    </div>
-
-    <div class="skill-box">
-      <i class="fab fa-python"></i>
-      <p>Python</p>
-    </div>
-
-    <div class="skill-box">
-      <i class="fab fa-git-alt"></i>
-      <p>Git</p>
-    </div>
-
-    <div class="skill-box">
-      <i class="fab fa-github"></i>
-      <p>GitHub</p>
-    </div>
-
-    <div class="skill-box">
-      <i class="fab fa-node-js"></i>
-      <p>Node.js</p>
-    </div>
-
-    <div class="skill-box">
-      <i class="fas fa-database"></i>
-      <p>Database</p>
-    </div>
-
-    <div class="skill-box">
-      <i class="fas fa-code"></i>
-      <p>Coding</p>
-    </div>
-
-    <div class="skill-box">
-      <i class="fas fa-mobile-alt"></i>
-      <p>Responsive</p>
-    </div>
-
-    <div class="skill-box">
-      <i class="fas fa-paint-brush"></i>
-      <p>UI Design</p>
-    </div>
-
-    <div class="skill-box">
-      <i class="fas fa-terminal"></i>
-      <p>Terminal</p>
-    </div>
-
   </div>
 </section>
 
+<!-- DIVIDER -->
+<div class="section-divider"><div class="divider-line"></div></div>
 
-  <!-- SOCIAL -->
-<div class="social">
-  <a href="https://www.facebook.com/yesin.woow" target="_blank">
-    <i class="fab fa-facebook-f"></i>
-  </a>
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section" style="text-align:center;">
+    <div class="section-label reveal" style="justify-content:center;">Contact</div>
+    <h2 class="section-title reveal">Let's Connect</h2>
+    <p class="reveal" style="color:var(--muted);max-width:480px;margin:0 auto 48px;line-height:1.8;font-size:0.95rem;">
+      I'm open to collaborations, freelance work, and new opportunities. Feel free to reach out!
+    </p>
 
-  <a href="https://github.com/yesinwoow" target="_blank">
-    <i class="fab fa-github"></i>
-  </a>
-
-  <a href="https://youtube.com/@yesinwoow" target="_blank">
-    <i class="fab fa-youtube"></i>
-  </a>
-
-  <a href="https://t.me/Yesinwoow" target="_blank">
-    <i class="fab fa-telegram-plane"></i>
-  </a>
-
-  <a href="https://www.instagram.com/yesinwoow" target="_blank">
-    <i class="fab fa-instagram"></i>
-  </a>
-</div>
+    <div class="social-row reveal">
+      <a href="https://www.facebook.com/yesin.woow" target="_blank" class="social-link">
+        <i class="fab fa-facebook-f"></i> Facebook
+      </a>
+      <a href="https://github.com/yesinwoow" target="_blank" class="social-link">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="https://youtube.com/@yesinwoow" target="_blank" class="social-link">
+        <i class="fab fa-youtube"></i> YouTube
+      </a>
+      <a href="https://t.me/Yesinwoow" target="_blank" class="social-link">
+        <i class="fab fa-telegram-plane"></i> Telegram
+      </a>
+      <a href="https://www.instagram.com/yesinwoow" target="_blank" class="social-link">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+    </div>
+  </div>
 </section>
+
+</main>
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 Yasin Arafat. All rights reserved.</p>
+  <div class="footer-inner">
+    <div class="footer-logo">Yesin</div>
+    <p class="footer-copy">© 2026 Yasin Arafat. All rights reserved.</p>
+    <div class="footer-status">
+      <span class="status-dot"></span>
+      Open to work
+    </div>
+  </div>
 </footer>
-
 <script src="JavaScript/script.js"></script>
-<script src="JavaScript/skills.js"></script>
+
 
 </body>
 </html>
