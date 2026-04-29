@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About HTML | The Foundation of Web</title>
+    <style>
+        /* ========= CSS VARIABLES (From Your Design System) ========= */
+        :root {
+            /* Colors */
+            --primary: #38bdf8;
+            --secondary: #818cf8;
+            --success: #34d399;
+            --bg-main: #060a0f;
+            --surface: #0c1220;
+            --text-primary: #e2e8f0;
+            --text-muted: #64748b;
+            --card-bg: rgba(12, 18, 32, 0.8);
+            --border-soft: rgba(56, 189, 248, 0.12);
+            --border-hover: rgba(56, 189, 248, 0.35);
+
+            /* Spacing */
+            --sec-pad-desktop: 100px 40px;
+            --sec-pad-mobile: 80px 24px;
+            --card-pad: 24px;
+            --card-pad-lg: 32px;
+            --gap-elem: 16px;
+            --gap-grid: 24px;
+            --gap-lg: 60px;
+            --margin-sm: 12px;
+            --margin-md: 24px;
+            --margin-lg: 60px;
+
+            /* Radius */
+            --rad-sm: 6px;
+            --rad-btn: 8px;
+            --rad-card: 12px;
+            --rad-card-lg: 16px;
+            --rad-pill: 100px;
+
+            /* Typography */
+            --h-large: clamp(2.5rem, 6vw, 4.5rem);
+            --h-sec: clamp(1.8rem, 4vw, 2.8rem);
+            --text-body: 0.95rem;
+            --text-muted-sz: 0.85rem;
+            --text-mono: 0.72rem;
+            --lh-body: 1.8;
+            --lh-lg: 1.2;
+        }
+
+        /* ========= GLOBAL STYLES ========= */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: var(--lh-body);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            line-height: var(--lh-lg);
+            font-weight: 700;
+        }
+
+        .section {
+            padding: var(--sec-pad-desktop);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: var(--h-sec);
+            text-align: center;
+            margin-bottom: var(--margin-lg);
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .text-center { text-align: center; }
+        .muted { color: var(--text-muted); font-size: var(--text-muted-sz); }
+
+        /* ========= DIVIDER ========= */
+        .divider {
+            height: 1px;
+            width: 100%;
+            background: linear-gradient(90deg, transparent, var(--border-soft), transparent);
+            margin: var(--margin-lg) 0;
+        }
+
+        /* ========= CARD TEMPLATE ========= */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-soft);
+            border-radius: var(--rad-card);
+            padding: var(--card-pad);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--border-hover);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 40px rgba(56,189,248,0.06);
+            transform: translateY(-5px);
+        }
+
+        /* ========= 1. INTRO ========= */
+        .intro-section h1 {
+            font-size: var(--h-large);
+            margin-bottom: var(--margin-md);
+            color: var(--primary);
+            text-shadow: 0 0 30px rgba(56,189,248,0.3);
+        }
+        .intro-card {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        /* ========= 2. TIMELINE ========= */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            border-left: 2px solid var(--border-soft);
+            padding-left: 40px;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: var(--margin-md);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -46px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            background: var(--primary);
+            border-radius: 50%;
+            box-shadow: 0 0 15px var(--primary);
+        }
+        .time-year {
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        /* ========= 3. CORE ELEMENTS (Grid) ========= */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--gap-grid);
+        }
+        .core-tag {
+            display: inline-block;
+            background: rgba(56,189,248,0.1);
+            color: var(--primary);
+            padding: 2px 8px;
+            border-radius: var(--rad-sm);
+            font-family: monospace;
+            margin-bottom: var(--margin-sm);
+        }
+
+        /* ========= 4. DOCUMENT STRUCTURE ========= */
+        .doc-structure {
+            background: var(--bg-main);
+            border: 1px solid var(--border-soft);
+            border-radius: var(--rad-card-lg);
+            padding: var(--card-pad-lg);
+            font-family: monospace;
+            position: relative;
+            overflow: hidden;
+        }
+        .layer {
+            border: 1px dashed var(--border-soft);
+            padding: 15px;
+            border-radius: var(--rad-sm);
+            margin: 10px 0;
+            background: rgba(255,255,255,0.02);
+            transition: 0.3s;
+        }
+        .layer:hover { border-color: var(--primary); background: rgba(56,189,248,0.05); }
+        .layer-label { color: var(--secondary); font-weight: bold; margin-bottom: 5px; }
+        .layer-desc { font-family: sans-serif; font-size: var(--text-muted-sz); color: var(--text-muted); }
+
+        /* ========= 5. SEMANTIC HTML ========= */
+        .semantic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: var(--gap-elem);
+            margin-bottom: var(--margin-md);
+        }
+        .semantic-card {
+            text-align: center;
+            padding: 15px;
+        }
+        .semantic-card code { color: var(--success); font-size: 1.1rem; }
+
+        /* ========= 6. HTML + CSS + JS ========= */
+        .trio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--gap-grid);
+            position: relative;
+        }
+        .trio-card { text-align: center; }
+        .trio-icon { font-size: 2.5rem; margin-bottom: 10px; color: var(--primary); }
+
+        /* ========= 7. HTML5 FEATURES ========= */
+        .feature-box {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(52, 211, 153, 0.1);
+            color: var(--success);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--rad-btn);
+            font-weight: bold;
+        }
+
+        /* ========= 8. MINI COMPONENTS ========= */
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--gap-grid);
+        }
+        .demo-box {
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: var(--rad-sm);
+            padding: 15px;
+            background: #000;
+        }
+        .demo-nav { display: flex; gap: 10px; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        .demo-link { height: 10px; width: 40px; background: #333; border-radius: 4px; }
+        .demo-form input { width: 100%; background: #111; border: 1px solid #333; padding: 8px; margin-bottom: 8px; border-radius: 4px; }
+        .demo-btn { background: var(--primary); height: 25px; width: 60px; border-radius: 4px; }
+
+        /* ========= 9. TERMINAL TIPS ========= */
+        .terminal {
+            background: #000;
+            border: 1px solid #333;
+            border-radius: var(--rad-card);
+            padding: var(--card-pad);
+            font-family: monospace;
+        }
+        .terminal-header {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
+        .dot.r { background: #ef4444; }
+        .dot.y { background: #eab308; }
+        .dot.g { background: #22c55e; }
+        .term-line { color: var(--success); margin-bottom: 10px; }
+        .term-line::before { content: '> '; color: var(--text-muted); }
+
+        /* ========= 10. FOOTER ========= */
+        footer {
+            text-align: center;
+            padding: var(--margin-lg) 20px;
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .section { padding: var(--sec-pad-mobile); }
+            .showcase-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="section intro-section text-center">
+        <h1>What is HTML?</h1>
+        <div class="card intro-card">
+            <p>HTML হলো web pages-এর structure তৈরির standard markup language। এটি ব্রাউজারকে নির্দেশ দেয় কীভাবে ওয়েবসাইটের কন্টেন্ট প্রদর্শন করতে হবে।</p>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section">
+        <h2 class="section-title">HTML History Timeline</h2>
+        <div class="timeline">
+            <div class="timeline-item card">
+                <div class="time-year">1991</div>
+                <p>Tim Berners-Lee HTML এর প্রথম ভার্সন তৈরি করেন।</p>
+            </div>
+            <div class="timeline-item card">
+                <div class="time-year">1995</div>
+                <p>HTML 2.0 রিলিজ হয়, যা প্রথম Standard HTML স্পেসিফিকেশন।</p>
+            </div>
+            <div class="timeline-item card">
+                <div class="time-year">1999</div>
+                <p>HTML 4.01 পাবলিশ হয়, যা ওয়েব ডেভেলপমেন্টে একটি বড় পরিবর্তন আনে।</p>
+            </div>
+            <div class="timeline-item card">
+                <div class="time-year">2014</div>
+                <p>HTML5 রিলিজ হয়, যা আধুনিক ওয়েবের foundation এবং এতে অডিও, ভিডিও সাপোর্ট যুক্ত করা হয়।</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section">
+        <h2 class="section-title">Core Elements</h2>
+        <div class="grid">
+            <div class="card">
+                <span class="core-tag">&lt;h1&gt; - &lt;h6&gt;</span>
+                <h3>Headings</h3>
+                <p class="muted">ওয়েবপেজের টাইটেল এবং সাব-টাইটেল ডিফাইন করতে ব্যবহৃত হয়।</p>
+            </div>
+            <div class="card">
+                <span class="core-tag">&lt;p&gt;</span>
+                <h3>Paragraphs</h3>
+                <p class="muted">টেক্সট বা প্যারাগ্রাফ লেখার জন্য এই ট্যাগ ব্যবহার করা হয়।</p>
+            </div>
+            <div class="card">
+                <span class="core-tag">&lt;a&gt;</span>
+                <h3>Links</h3>
+                <p class="muted">এক পেজ থেকে অন্য পেজে যাওয়ার জন্য হাইপারলিংক তৈরি করে।</p>
+            </div>
+            <div class="card">
+                <span class="core-tag">&lt;img&gt;</span>
+                <h3>Images</h3>
+                <p class="muted">ওয়েবপেজে ছবি যুক্ত করার জন্য ব্যবহৃত হয়।</p>
+            </div>
+            <div class="card">
+                <span class="core-tag">&lt;ul&gt;, &lt;ol&gt;</span>
+                <h3>Lists</h3>
+                <p class="muted">তথ্যগুলো বুলেট পয়েন্ট বা নাম্বারিং আকারে সাজাতে সাহায্য করে।</p>
+            </div>
+            <div class="card">
+                <span class="core-tag">&lt;form&gt;</span>
+                <h3>Forms</h3>
+                <p class="muted">ইউজারের কাছ থেকে ডেটা ইনপুট নেওয়ার জন্য ফর্ম তৈরি করে।</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section">
+        <h2 class="section-title">Document Structure</h2>
+        <div class="doc-structure">
+            <div class="layer-label">&lt;html&gt;</div>
+            <div class="layer-desc">Root element of the page.</div>
+            
+            <div class="layer" style="margin-left: 20px;">
+                <div class="layer-label">&lt;head&gt;</div>
+                <div class="layer-desc">Contains meta information, title, and links to CSS.</div>
+            </div>
+            
+            <div class="layer" style="margin-left: 20px;">
+                <div class="layer-label">&lt;body&gt;</div>
+                <div class="layer-desc">Visible page content goes here.</div>
+                
+                <div class="layer" style="margin-left: 20px;">
+                    <div class="layer-label">&lt;h1&gt; Hello World &lt;/h1&gt;</div>
+                    <div class="layer-label">&lt;p&gt; Paragraph content &lt;/p&gt;</div>
+                </div>
+            </div>
+            
+            <div class="layer-label" style="margin-top: 10px;">&lt;/html&gt;</div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section">
+        <h2 class="section-title">Semantic HTML</h2>
+        <div class="semantic-grid">
+            <div class="card semantic-card"><code>&lt;header&gt;</code></div>
+            <div class="card semantic-card"><code>&lt;nav&gt;</code></div>
+            <div class="card semantic-card"><code>&lt;main&gt;</code></div>
+            <div class="card semantic-card"><code>&lt;section&gt;</code></div>
+            <div class="card semantic-card"><code>&lt;article&gt;</code></div>
+            <div class="card semantic-card"><code>&lt;footer&gt;</code></div>
+        </div>
+        <div class="card text-center" style="max-width: 800px; margin: 0 auto;">
+            <p><strong>Why it matters?</strong> Semantic tags কোডের অর্থ ব্রাউজার এবং ডেভেলপার উভয়কেই স্পষ্টভাবে বুঝিয়ে দেয়। এটি ওয়েবসাইটের SEO উন্নত করে এবং Screen Reader ব্যবহারকারীদের জন্য Accessibility বৃদ্ধি করে।</p>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section">
+        <h2 class="section-title">The Web Trinity</h2>
+        <div class="trio-grid">
+            <div class="card trio-card">
+                <div class="trio-icon">🏗️</div>
+                <h3>HTML</h3>
+                <p style="color: var(--primary);">The Skeleton</p>
+                <p class="muted">ওয়েবপেজের মূল কাঠামো বা কঙ্কাল তৈরি করে।</p>
+            </div>
+            <div class="card trio-card">
+                <div class="trio-icon">🎨</div>
+                <h3>CSS</h3>
+                <p style="color: var(--secondary);">The Design</p>
+                <p class="muted">কাঠামোতে রঙ, স্টাইল এবং ডিজাইন যুক্ত করে।</p>
+            </div>
+            <div class="card trio-card">
+                <div class="trio-icon">⚙️</div>
+                <h3>JavaScript</h3>
+                <p style="color: var(--success);">The Functionality</p>
+                <p class="muted">ওয়েবসাইটকে ডায়নামিক এবং ইন্টারেক্টিভ করে তোলে।</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section">
+        <h2 class="section-title">HTML5 Features</h2>
+        <div class="grid">
+            <div class="card feature-box">
+                <div class="feature-icon">▶️</div>
+                <div>
+                    <h3>Video & Audio</h3>
+                    <p class="muted">Native media support.</p>
+                </div>
+            </div>
+            <div class="card feature-box">
+                <div class="feature-icon">🖌️</div>
+                <div>
+                    <h3>Canvas</h3>
+                    <p class="muted">2D drawing via JavaScript.</p>
+                </div>
+            </div>
+            <div class="card feature-box">
+                <div class="feature-icon">📐</div>
+                <div>
+                    <h3>SVG</h3>
+                    <p class="muted">Scalable Vector Graphics.</p>
+                </div>
+            </div>
+            <div class="card feature-box">
+                <div class="feature-icon">📝</div>
+                <div>
+                    <h3>Forms API</h3>
+                    <p class="muted">New input types & validation.</p>
+                </div>
+            </div>
+            <div class="card feature-box">
+                <div class="feature-icon">💾</div>
+                <div>
+                    <h3>Local Storage</h3>
+                    <p class="muted">Store data on browser.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section">
+        <h2 class="section-title">Component Showcase</h2>
+        <div class="showcase-grid">
+            <div class="card">
+                <h3 style="margin-bottom: 10px; font-size: 1rem;">Navbar Layout</h3>
+                <div class="demo-box">
+                    <div class="demo-nav">
+                        <div class="demo-link" style="width: 60px; background: var(--primary);"></div>
+                        <div style="flex-grow: 1;"></div>
+                        <div class="demo-link"></div>
+                        <div class="demo-link"></div>
+                        <div class="demo-link"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <h3 style="margin-bottom: 10px; font-size: 1rem;">Article Card</h3>
+                <div class="demo-box">
+                    <div style="height: 60px; background: #222; margin-bottom: 10px; border-radius: 4px;"></div>
+                    <div class="demo-link" style="width: 80%; margin-bottom: 5px;"></div>
+                    <div class="demo-link" style="width: 60%;"></div>
+                </div>
+            </div>
+            <div class="card">
+                <h3 style="margin-bottom: 10px; font-size: 1rem;">Login Form</h3>
+                <div class="demo-box demo-form">
+                    <input type="text" disabled placeholder="Username">
+                    <input type="password" disabled placeholder="Password">
+                    <div class="demo-btn"></div>
+                </div>
+            </div>
+            <div class="card">
+                <h3 style="margin-bottom: 10px; font-size: 1rem;">Data Table</h3>
+                <div class="demo-box">
+                    <div style="display: flex; gap: 5px; margin-bottom: 5px;">
+                        <div class="demo-link" style="flex:1; background: var(--secondary);"></div>
+                        <div class="demo-link" style="flex:1; background: var(--secondary);"></div>
+                    </div>
+                    <div style="display: flex; gap: 5px; margin-bottom: 5px;">
+                        <div class="demo-link" style="flex:1;"></div>
+                        <div class="demo-link" style="flex:1;"></div>
+                    </div>
+                    <div style="display: flex; gap: 5px;">
+                        <div class="demo-link" style="flex:1;"></div>
+                        <div class="demo-link" style="flex:1;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section">
+        <h2 class="section-title">Beginner Tips</h2>
+        <div class="terminal">
+            <div class="terminal-header">
+           
