@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Content Page</title>
+
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+
+  <div class="navbar">
+    <a href="index.html">Home</a>
+  </div>
+eikane ekta icob add korbo content onu jaye icin hobe ja json teke paoya jabe
+  <div class="wrapper">
+    <div class="card">
+      <div class="title" id="title">Loading...</div>
+      <div class="desc" id="desc"></div>
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    fetch(`data/${id}.json`)
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("title").innerText = data.title;
+        document.getElementById("desc").innerHTML = marked.parse(data.desc);
+      })
+      .catch(err => {
+        document.getElementById("title").innerText = "Content not found";
+        console.error(err);
+      });
+  </script>
+
+</body>
+</html>
