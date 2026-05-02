@@ -1,116 +1,404 @@
+:root {
+    --bg: #060a0f;
+    --surface: #0c1220;
+    --border: rgba(56, 189, 248, 0.12);
+    --accent: #38bdf8;
+    --accent2: #818cf8;
+    --accent3: #34d399;
+    --text: #e2e8f0;
+    --muted: #64748b;
+    --card: rgba(12, 18, 32, 0.8);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0b1220;
-  color: white;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Sora", sans-serif;
+    overflow-x: hidden;
 }
 
-.navbar {
-  background: #1e293b;
-  padding: 15px 25px;
+/* ── NOISE OVERLAY ── */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.4;
 }
 
-.navbar a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+/* ── GRID BG ── */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(56, 189, 248, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56, 189, 248, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 0;
+}
+/* ── NAVBAR ── */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    background: rgba(6, 10, 15, 0.7);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
 }
 
+.nav-logo span {
+    color: var(--muted);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent);
+    transition: width 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+.nav-links a:hover::after {
+    width: 100%;
+}
+main {
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================
+   WRAPPER
+========================= */
 .wrapper {
-  margin-top: 10px;
+  max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 10px;
 }
 
+/* =========================
+   CARD (GITHUB STYLE)
+========================= */
 .card {
-  max-width: 400px;
-  margin: 0 auto;
-  text-align: center;
-  background: rgba(255,255,255,0.04);
-  padding: 40px 30px;
-  border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.08);
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    backdrop-filter: blur(10px);
+    transition:
+        border-color 0.3s,
+        transform 0.3s;
 }
 
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s;
+}
+
+.card:hover::before {
+    transform: scaleX(1);
+}
+
+.card:hover {
+    border-color: rgba(56, 189, 248, 0.3);
+    transform: translateY(-6px);
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.4),
+        0 0 40px rgba(56, 189, 248, 0.06);
+}
+
+/* ICON */
 .icon {
-  font-size: 42px;
-  color: #38bdf8;
+  font-size: 40px;
   margin-bottom: 10px;
+  .fa-html5 {
+    color: #e34c26;
+}
+.fa-css3-alt {
+    color: #264de4;
+}
+.fa-js {
+    color: #f0db4f;
+}
+.fa-python {
+    color: #3776ab;
+}
+.fa-git-alt {
+    color: #f1502f;
+}
+.fa-github {
+    color: #c9d1d9;
+}
+.fa-node-js {
+    color: #3c873a;
+}
+.fa-database {
+    color: #f29111;
+}
+.fa-code {
+    color: var(--accent2);
+}
+.fa-mobile-alt {
+    color: var(--accent);
+}
+.fa-paint-brush {
+    color: #ff7b72;
+}
+.fa-terminal {
+    color: #34d399;
 }
 
+}
+
+/* TITLE */
 .title {
-  font-size: 26px;
-  font-weight: bold;
-  margin-bottom: 10px;
+font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    animation: fadeUp 0.8s 0.2s ease both;
 }
 
+/* DESCRIPTION */
 .desc {
   font-size: 14px;
-  color: #94a3b8;
+  color: #8b949e;
   line-height: 1.6;
   text-align: left;
+  animation: fadeUp 0.8s 0.2s ease both;
 }
-/* Markdown container */
+/* =========================
+   MARKDOWN CONTAINER BASE
+========================= */
 .desc {
-  font-size: 14px;
+  font-size: 15px;
   color: #cbd5e1;
-  line-height: 1.7;
+  line-height: 1.75;
+  text-align: left;
+  word-break: break-word;
 }
 
-/* Headings */
-.desc h1,
-.desc h2,
-.desc h3 {
+/* =========================
+   HEADINGS (H1 - H3)
+========================= */
+.desc h1 {
+  font-size: 28px;
   color: #ffffff;
-  margin: 15px 0 10px;
+  margin: 20px 0 12px;
+  font-weight: 700;
 }
 
-/* Paragraph */
+.desc h2 {
+  font-size: 22px;
+  color: #ffffff;
+  margin: 18px 0 10px;
+  font-weight: 600;
+  border-left: 3px solid #38bdf8;
+  padding-left: 10px;
+}
+
+.desc h3 {
+  color: var(--accent2);
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+
+/* =========================
+   PARAGRAPH
+========================= */
 .desc p {
   margin: 10px 0;
+  color: #cbd5e1;
 }
 
-/* Bold text */
+/* =========================
+   STRONG TEXT
+========================= */
 .desc strong {
   color: #ffffff;
+  font-weight: 600;
 }
 
-/* Links */
+/* =========================
+   LINKS
+========================= */
 .desc a {
   color: #38bdf8;
   text-decoration: none;
+  border-bottom: 1px dashed rgba(56,189,248,0.5);
+  transition: 0.2s;
 }
 
 .desc a:hover {
-  text-decoration: underline;
+  color: #60a5fa;
+  border-bottom-color: #60a5fa;
 }
 
-/* Lists */
+/* =========================
+   LISTS
+========================= */
 .desc ul,
 .desc ol {
-  padding-left: 20px;
-  margin: 10px 0;
+  padding-left: 22px;
+  margin: 12px 0;
 }
 
 .desc li {
-  margin: 5px 0;
+  margin: 6px 0;
+  color: #cbd5e1;
 }
 
-/* Code block */
+/* =========================
+   CODE BLOCK
+========================= */
 .desc pre {
   background: #0f172a;
-  padding: 12px;
-  border-radius: 10px;
+  padding: 14px;
+  border-radius: 12px;
   overflow-x: auto;
-  border: 1px solid rgba(255,255,255,0.1);
+
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.4);
 }
 
+/* code text inside block */
+.desc pre code {
+  color: #fbbf24;
+  font-size: 13px;
+}
+
+/* =========================
+   INLINE CODE
+========================= */
 .desc code {
   font-family: monospace;
+  background: #1e293b;
   color: #fbbf24;
+  padding: 3px 6px;
+  border-radius: 6px;
+  font-size: 13px;
 }
 
-/* Inline code */
-.desc p code {
-  background: #1e293b;
-  padding: 2px 6px;
+/* =========================
+   BLOCKQUOTE
+========================= */
+.desc blockquote {
+  margin: 15px 0;
+  padding: 10px 15px;
+  border-left: 3px solid #38bdf8;
+  background: rgba(56,189,248,0.08);
+  color: #e2e8f0;
   border-radius: 6px;
+  font-style: italic;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+@media (max-width: 768px) {
+    nav {
+        padding: 16px 24px;
+    }
+    .nav-links {
+        gap: 20px;
+    }
+    .nav-links a {
+        font-size: 0.75rem;
+    }
+    .section {
+        padding: 80px 24px;
+    }
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
 }
