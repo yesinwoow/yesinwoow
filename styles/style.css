@@ -22,10 +22,10 @@ html {
     scroll-behavior: smooth;
 }
 body {
-  -webkit-user-select: none; /* Chrome, Safari */
-  -moz-user-select: none;    /* Firefox */
-  -ms-user-select: none;     /* IE */
-  user-select: none;         /* Standard */
+    -webkit-user-select: none; /* Chrome, Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE */
+    user-select: none; /* Standard */
 }
 body {
     background: var(--bg);

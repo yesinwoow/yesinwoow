@@ -2,163 +2,214 @@
    ROOT + RESET
 ========================= */
 :root {
-  --bg: #060a0f;
-  --card: rgba(12, 18, 32, 0.85);
-  --border: rgba(56, 189, 248, 0.12);
-  --accent: #38bdf8;
-  --accent2: #818cf8;
-  --text: #e2e8f0;
-  --muted: #64748b;
+    --bg: #060a0f;
+    --card: rgba(12, 18, 32, 0.85);
+    --border: rgba(56, 189, 248, 0.12);
+    --accent: #38bdf8;
+    --accent2: #818cf8;
+    --text: #e2e8f0;
+    --muted: #64748b;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* =========================
    BODY
 ========================= */
 body {
-  -webkit-user-select: none; /* Chrome, Safari */
-  -moz-user-select: none;    /* Firefox */
-  -ms-user-select: none;     /* IE */
-  user-select: none;         /* Standard */
+    -webkit-user-select: none; /* Chrome, Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE */
+    user-select: none; /* Standard */
 }
 body {
-  font-family: "Sora", sans-serif;
-  background: var(--bg);
-  color: var(--text);
+    font-family: "Sora", sans-serif;
+    background: var(--bg);
+    color: var(--text);
 }
 
 /* =========================
    WRAPPER
 ========================= */
 .wrapper {
-  padding: 80px 15px 20px; /* top = navbar space */
-  display: flex;
-  justify-content: center;
+    padding: 100px 20px 40px; /* navbar gap + bottom space */
+    display: flex;
+    justify-content: center;
 }
 
 /* =========================
    CARD
-========================= */
-.card {
-  width: 100%;
-  max-width: 500px;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 20px;
-  text-align: center;
+========================= */.card {
+    width: 100%;
+    max-width: 750px; /* আগে 500px ছিল */
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 30px; /* desktop এ একটু বেশি padding */
+    text-align: center;
 }
+
 
 /* =========================
    ICON
 ========================= */
 .icon {
-  font-size: 38px;
-  margin-bottom: 10px;
+    font-size: 38px;
+    margin-bottom: 10px;
 }
 
 /* ICON COLORS */
-.fa-html5 { color: #e34c26; }
-.fa-css3-alt { color: #264de4; }
-.fa-js { color: #f0db4f; }
-.fa-python { color: #3776ab; }
-.fa-git-alt { color: #f1502f; }
-.fa-github { color: #c9d1d9; }
-.fa-node-js { color: #3c873a; }
-.fa-database { color: #f29111; }
-.fa-code { color: var(--accent2); }
-.fa-mobile-alt { color: var(--accent); }
-.fa-paint-brush { color: #ff7b72; }
-.fa-terminal { color: #34d399; }
+.fa-html5 {
+    color: #e34c26;
+}
+.fa-css3-alt {
+    color: #264de4;
+}
+.fa-js {
+    color: #f0db4f;
+}
+.fa-python {
+    color: #3776ab;
+}
+.fa-git-alt {
+    color: #f1502f;
+}
+.fa-github {
+    color: #c9d1d9;
+}
+.fa-node-js {
+    color: #3c873a;
+}
+.fa-database {
+    color: #f29111;
+}
+.fa-code {
+    color: var(--accent2);
+}
+.fa-mobile-alt {
+    color: var(--accent);
+}
+.fa-paint-brush {
+    color: #ff7b72;
+}
+.fa-terminal {
+    color: #34d399;
+}
 
 /* =========================
    TITLE
 ========================= */
 .title {
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin-bottom: 10px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
 /* =========================
    MARKDOWN CONTENT
 ========================= */
 .desc {
-  font-size: 14px;
-  line-height: 1.7;
-  color: #cbd5e1;
-  text-align: left;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #cbd5e1;
+    text-align: left;
 }
 
 /* headings */
-.desc h1 { font-size: 22px; margin: 16px 0 10px; }
-.desc h2 { font-size: 18px; margin: 14px 0 8px; border-left: 3px solid var(--accent); padding-left: 8px; }
-.desc h3 { font-size: 15px; color: var(--accent2); }
+.desc h1 {
+    font-size: 22px;
+    margin: 16px 0 10px;
+}
+.desc h2 {
+    font-size: 18px;
+    margin: 14px 0 8px;
+    border-left: 3px solid var(--accent);
+    padding-left: 8px;
+}
+.desc h3 {
+    font-size: 15px;
+    color: var(--accent2);
+}
 
 /* text */
-.desc p { margin: 10px 0; }
-.desc strong { color: #fff; }
+.desc p {
+    margin: 10px 0;
+}
+.desc strong {
+    color: #fff;
+}
 
 /* links */
 .desc a {
-  color: var(--accent);
-  text-decoration: none;
+    color: var(--accent);
+    text-decoration: none;
 }
 .desc a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 /* lists */
-.desc ul, .desc ol {
-  padding-left: 18px;
-  margin: 10px 0;
+.desc ul,
+.desc ol {
+    padding-left: 18px;
+    margin: 10px 0;
 }
 
 /* code */
 .desc pre {
-  background: #0f172a;
-  padding: 10px;
-  border-radius: 8px;
-  overflow-x: auto;
+    background: #0f172a;
+    padding: 10px;
+    border-radius: 8px;
+    overflow-x: auto;
 }
 .desc code {
-  background: #1e293b;
-  padding: 2px 5px;
-  border-radius: 5px;
-  color: #fbbf24;
+    background: #1e293b;
+    padding: 2px 5px;
+    border-radius: 5px;
+    color: #fbbf24;
 }
 
 /* blockquote */
 .desc blockquote {
-  border-left: 3px solid var(--accent);
-  padding: 8px 12px;
-  background: rgba(56,189,248,0.08);
-  margin: 10px 0;
+    border-left: 3px solid var(--accent);
+    padding: 8px 12px;
+    background: rgba(56, 189, 248, 0.08);
+    margin: 10px 0;
 }
 
-/* =========================
-   MOBILE IMPROVEMENT
-========================= */
-@media (max-width: 480px) {
+@media (min-width: 768px) {
 
   .title {
-    font-size: 1.3rem;
+    font-size: 2rem;
   }
 
   .desc {
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .icon {
-    font-size: 32px;
+    font-size: 44px;
   }
 
-  .nav-links {
-    gap: 8px;
+}
+@media (min-width: 1200px) {
+
+  .card {
+    max-width: 900px;
+    padding: 40px;
   }
+
+  .title {
+    font-size: 2.3rem;
+  }
+
+  .desc {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
 }
