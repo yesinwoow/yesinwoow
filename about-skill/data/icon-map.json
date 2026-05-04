@@ -1,0 +1,123 @@
+{
+  "book": "fa-solid fa-book",
+  "write": "fa-solid fa-pen",
+  "analytics": "fa-solid fa-chart-column",
+
+  "files": "fa-solid fa-folder",
+  "document": "fa-solid fa-file-lines",
+
+  "system": "fa-solid fa-gear",
+  "link": "fa-solid fa-link",
+  "broken_link": "fa-solid fa-link-slash",
+
+  "idea": "fa-solid fa-lightbulb",
+  "fire": "fa-solid fa-fire",
+  "love": "fa-solid fa-heart",
+
+  "check": "fa-solid fa-circle-check",
+
+  "home": "fa-solid fa-house",
+  "search": "fa-solid fa-magnifying-glass",
+  "notification": "fa-solid fa-bell",
+  "email": "fa-solid fa-envelope",
+  "message": "fa-solid fa-comment",
+
+  "user": "fa-solid fa-user",
+  "users": "fa-solid fa-users",
+
+  "calendar": "fa-solid fa-calendar",
+  "clock": "fa-solid fa-clock",
+
+  "delete": "fa-solid fa-trash",
+  "save": "fa-solid fa-floppy-disk",
+
+  "camera": "fa-solid fa-camera",
+  "video": "fa-solid fa-video",
+  "website": "fa-solid fa-globe",
+
+  "location": "fa-solid fa-location-dot",
+
+  "favorite": "fa-solid fa-star",
+  "pin": "fa-solid fa-thumbtack",
+
+  "gift": "fa-solid fa-gift",
+  "cart": "fa-solid fa-cart-shopping",
+  "bag": "fa-solid fa-bag-shopping",
+  "payment": "fa-solid fa-credit-card",
+  "money": "fa-solid fa-coins",
+
+  "mobile": "fa-solid fa-mobile-screen",
+  "laptop": "fa-solid fa-laptop",
+  "desktop": "fa-solid fa-desktop",
+  "keyboard": "fa-solid fa-keyboard",
+  "mouse": "fa-solid fa-computer-mouse",
+
+  "audio": "fa-solid fa-headphones",
+  "music": "fa-solid fa-music",
+  "radio": "fa-solid fa-radio",
+
+  "announcement": "fa-solid fa-bullhorn",
+  "megaphone": "fa-solid fa-bullhorn",
+
+  "launch": "fa-solid fa-rocket",
+  "travel": "fa-solid fa-plane",
+  "car": "fa-solid fa-car",
+
+  "food": "fa-solid fa-utensils",
+  "coffee": "fa-solid fa-mug-hot",
+  "drink": "fa-solid fa-wine-glass",
+  "beer": "fa-solid fa-beer-mug-empty",
+
+  "sports": "fa-solid fa-futbol",
+  "game": "fa-solid fa-gamepad",
+
+  "art": "fa-solid fa-palette",
+  "movie": "fa-solid fa-film",
+  "theater": "fa-solid fa-masks-theater",
+
+  "instrument": "fa-solid fa-guitar",
+  "piano": "fa-solid fa-music",
+  "violin": "fa-solid fa-music",
+  "trumpet": "fa-solid fa-music",
+
+  "award": "fa-solid fa-trophy",
+  "medal": "fa-solid fa-medal",
+  "military": "fa-solid fa-shield-halved",
+
+  "ticket": "fa-solid fa-ticket",
+  "pass": "fa-solid fa-id-card",
+
+  "science": "fa-solid fa-flask",
+  "biology": "fa-solid fa-dna",
+  "telescope": "fa-solid fa-telescope",
+  "microscope": "fa-solid fa-microscope",
+
+  "temperature": "fa-solid fa-temperature-half",
+  "weather": "fa-solid fa-cloud",
+  "sun": "fa-solid fa-sun",
+  "moon": "fa-solid fa-moon",
+
+  "power": "fa-solid fa-bolt",
+  "battery": "fa-solid fa-battery-full",
+  "signal": "fa-solid fa-signal",
+  "satellite": "fa-solid fa-satellite",
+
+  "key": "fa-solid fa-key",
+  "lock": "fa-solid fa-lock",
+  "unlock": "fa-solid fa-lock-open",
+  "security": "fa-solid fa-shield-halved",
+
+  "flag": "fa-solid fa-flag",
+
+  "sos": "fa-solid fa-circle-exclamation",
+  "forbidden": "fa-solid fa-ban",
+  "warning": "fa-solid fa-triangle-exclamation",
+  "stop": "fa-solid fa-hand",
+
+  "package": "fa-solid fa-box",
+  "world": "fa-solid fa-earth-americas",
+  "target": "fa-solid fa-bullseye",
+  "time": "fa-solid fa-hourglass-half",
+  "book": "fa-solid fa-book",
+  "brain": "fa-solid fa-brain"
+}
