@@ -300,28 +300,25 @@ body::after {
 /* =========================
    RESPONSIVE
 ========================= */
-@media (min-width: 768px) {
-    .title {
-        font-size: 2rem;
+@media (max-width: 768px) {
+    nav {
+        padding: 16px 24px;
     }
-    .desc {
-        font-size: 15px;
+    .nav-links {
+        gap: 20px;
     }
-    .icon {
-        font-size: 44px;
+    .nav-links a {
+        font-size: 0.75rem;
     }
-}
-
-@media (min-width: 1200px) {
-    .card {
-        max-width: 900px;
-        padding: 40px;
+    .section {
+        padding: 80px 24px;
     }
-    .title {
-        font-size: 2.3rem;
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
-    .desc {
-        font-size: 16px;
-        line-height: 1.8;
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
     }
 }
