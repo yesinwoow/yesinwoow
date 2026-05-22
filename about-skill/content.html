@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Content Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="../nav/nav.css">
+
+
+</head>
+
+<body>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <!-- তোমার বাকি existing HTML -->
+  <nav>
+    <ul class="nav-links">
+      <li><a href="../index.html#home">Home</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#skills">Skills</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="wrapper">
+    <div class="card">
+      <div class="icon" id="icon"></div>
+      <div class="title" id="title">
+        Loading...
+      </div>
+      <div class="desc" id="desc"></div>
+    </div>
+  </div>
+  <script src="JavaScript/imoji.js"></script>
+  <script src="../nav/nav.js"></script>
+  <!--
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get("id");
+
+      fetch(`data/${id}.json`)
+      .then(res => {
+      if (!res.ok) throw new Error("Not found");
+      return res.json();
+      })
+      .then(data => {
+      document.getElementById("title").innerText = data.title;
+      document.getElementById("desc").innerHTML = marked.parse(data.desc);
+
+      // ICON add
+      document.getElementById("icon").innerHTML =
+      `<i class="${data.icon}"></i>`;
+      })
+      .catch(err => {
+      document.getElementById("title").innerText = "Content not found ❌";
+      document.getElementById("desc").innerHTML = "";
+      console.error(err);
+      });
+    </script>
+  -->
+
+</body>
+</html>

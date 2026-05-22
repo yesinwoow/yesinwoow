@@ -1,0 +1,140 @@
+{
+    "📚": "book",
+    "📖": "book",
+    "📕": "book",
+    "📗": "book",
+    "📘": "book",
+
+    "📝": "write",
+    "✏️": "write",
+    "🖋️": "write",
+
+    "📊": "analytics",
+    "📈": "analytics",
+    "📉": "analytics",
+
+    "🗂️": "files",
+    "📁": "files",
+    "📂": "files",
+    "📄": "document",
+
+    "⚙️": "system",
+    "🔧": "system",
+    "🛠️": "system",
+
+    "🔗": "link",
+    "⛓️‍💥": "broken_link",
+
+    "💡": "idea",
+    "🔥": "fire",
+    "❤️": "love",
+
+    "✅": "check",
+    "✔️": "check",
+    "☑️": "check",
+
+    "🏠": "home",
+    "🔍": "search",
+    "🔔": "notification",
+    "✉️": "email",
+    "💬": "message",
+    "👤": "user",
+    "👥": "users",
+
+    "📅": "calendar",
+    "⏰": "clock",
+    "🗑️": "delete",
+    "💾": "save",
+
+    "📷": "camera",
+    "📹": "video",
+    "🌐": "website",
+    "📍": "location",
+
+    "⭐": "favorite",
+    "📌": "pin",
+
+    "🎁": "gift",
+    "🛒": "cart",
+    "🛍️": "bag",
+    "💳": "payment",
+    "💰": "money",
+
+    "📱": "mobile",
+    "💻": "laptop",
+    "🖥️": "desktop",
+    "⌨️": "keyboard",
+    "🖱️": "mouse",
+
+    "🎧": "audio",
+    "🎵": "music",
+    "📻": "radio",
+
+    "📢": "announcement",
+    "📣": "megaphone",
+
+    "🚀": "launch",
+    "✈️": "travel",
+    "🚗": "car",
+
+    "🍴": "food",
+    "☕": "coffee",
+    "🍷": "drink",
+    "🍺": "beer",
+
+    "⚽": "sports",
+    "🎮": "game",
+
+    "🎨": "art",
+    "🎬": "movie",
+    "🎭": "theater",
+
+    "🎸": "instrument",
+    "🎹": "piano",
+    "🎻": "violin",
+    "🎺": "trumpet",
+
+    "🏆": "award",
+    "🥇": "medal",
+    "🎖️": "military",
+
+    "🎫": "ticket",
+    "🎟️": "pass",
+
+    "🧪": "science",
+    "🧬": "biology",
+    "🔭": "telescope",
+    "🔬": "microscope",
+
+    "🌡️": "temperature",
+    "☁️": "weather",
+    "☀️": "sun",
+    "🌙": "moon",
+
+    "⚡": "power",
+    "🔋": "battery",
+    "📶": "signal",
+    "📡": "satellite",
+
+    "🔑": "key",
+    "🔒": "lock",
+    "🔓": "unlock",
+    "🛡️": "security",
+
+    "🚩": "flag",
+    "🏳️": "flag",
+    "🏴": "flag",
+    "🏳️‍🌈": "flag",
+    "🏴‍☠️": "flag",
+
+    "🆘": "sos",
+    "🚫": "forbidden",
+    "⚠️": "warning",
+    "🛑": "stop",
+   "📦": "package",
+   "🌍": "world",
+   "🎯": "target",
+   "⏳": "time",
+   "📚": "book",
+   "🧠": "brain"
+}
