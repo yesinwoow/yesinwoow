@@ -60,37 +60,6 @@ body::after {
     z-index: 0;
 }
 
-/* ── GLOW ORBS ── */
-.orb {
-    position: fixed;
-    border-radius: 50%;
-    filter: blur(120px);
-    pointer-events: none;
-    z-index: 0;
-    opacity: 0.18;
-}
-.orb-1 {
-    width: 600px;
-    height: 600px;
-    background: #38bdf8;
-    top: -200px;
-    right: -100px;
-}
-.orb-2 {
-    width: 500px;
-    height: 500px;
-    background: #818cf8;
-    bottom: 100px;
-    left: -150px;
-}
-.orb-3 {
-    width: 300px;
-    height: 300px;
-    background: #34d399;
-    top: 50%;
-    left: 40%;
-}
-
 /* =========================
    WRAPPER
 ========================= */
@@ -112,7 +81,7 @@ body::after {
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 16px;
-    padding: 30px;
+    padding: 10px;
     text-align: center;
 
     /* fix: glass effect like home page cards */
@@ -300,25 +269,4 @@ body::after {
 /* =========================
    RESPONSIVE
 ========================= */
-@media (max-width: 768px) {
-    nav {
-        padding: 16px 24px;
-    }
-    .nav-links {
-        gap: 20px;
-    }
-    .nav-links a {
-        font-size: 0.75rem;
-    }
-    .section {
-        padding: 80px 24px;
-    }
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    .footer-inner {
-        flex-direction: column;
-        text-align: center;
-    }
-}
+
