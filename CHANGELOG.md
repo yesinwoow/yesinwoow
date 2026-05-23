@@ -4,6 +4,20 @@ All notable changes tracked by `gitx`.
 
 ---
 
+## [v1.0.8] — 2026-05-24 00:08
+**chore**: test 3
+`0154809`
+
+```
+ .dev/version-log.txt | Bin 386 -> 463 bytes
+ .dev/version.txt     |   2 +-
+ CHANGELOG.md         |  16 +++++++++++++++-
+ 3 files changed, 16 insertions(+), 2 deletions(-)
+```
+
+---
+
+
 ## [v1.0.7] — 2026-05-24 00:00
 **chore**: test 2
 `5e11883`
