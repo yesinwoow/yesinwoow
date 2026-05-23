@@ -1,3 +1,4 @@
 1.0.1 | update | cdfb8158d91ad6a5ecb67fb49bdbde8ca5249415
 1.0.2 | update | bb62b3884db2f9e8af8273bd7b80ac5fa1994d34
 1.0.3 | update | f414f3fbb076cd2ac1f15c82bb641017aa891f9b
+1.0.4 | update | a46d317e2c6a1764cc1fc3ea0a575c2683e677e6
