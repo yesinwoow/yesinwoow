@@ -1,3 +1,6 @@
+function openContent(id) {
+  window.location.href = `about-skill/content.html?id=${id}`;
+}
 
   // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(link => {

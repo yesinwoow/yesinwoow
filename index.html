@@ -1,20 +1,112 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Yesin Arafat — Developer</title>
+<head>
+    <meta charset="UTF-8" />
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>
+        Yesin Arafat — Frontend Developer & Full-Stack Learner
+    </title>
+    <meta
+        name="description"
+        content="Yesin Arafat is a frontend developer and full-stack learner building modern, responsive, and user-focused web experiences with clean code and thoughtful design."
+    />
+
+    <meta
+        name="keywords"
+        content="Yesin Arafat, Frontend Developer, Full-Stack Developer, Web Developer, JavaScript, HTML, CSS, Portfolio"
+    />
+
+    <meta name="author" content="Yesin Arafat" />
+
+    <meta
+        name="robots"
+        content="index, follow"
+    />
+
+    <meta
+        name="theme-color"
+        content="#0f172a"
+    />
+    <meta
+        property="og:type"
+        content="website"
+    />
+    <meta
+        property="og:title"
+        content="Yesin Arafat — Developer Portfolio"
+    />
+    <meta
+        property="og:description"
+        content="Modern developer portfolio showcasing projects, skills, and creative web experiences by Yesin Arafat."
+    />
+    <meta
+        property="og:image"
+        content="images/preview.png"
+    />
+    <meta
+        property="og:site_name"
+        content="Yesin Portfolio"
+    />
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    />
+    <meta
+        name="twitter:title"
+        content="Yesin Arafat — Developer Portfolio"
+    />
+    <meta
+        name="twitter:description"
+        content="Frontend developer portfolio with modern projects, animations, and responsive web experiences."
+    />
+    <meta
+        name="twitter:image"
+        content="images/preview.png"
+    />
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    />
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    />
+    <link
+        rel="preconnect"
+        href="https://cdnjs.cloudflare.com"
+    />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Sora:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+        rel="stylesheet"
+        href="styles/style.css"
+    />
         <link
-            href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Sora:wght@300;400;500;600;700&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        />
-        <link rel="stylesheet" href="styles/style.css" />
-        <link rel="stylesheet" href="nav/nav.css" />
-    </head>
+        rel="stylesheet"
+        href="styles/Timeline.css"
+    />
+    <link
+        rel="stylesheet"
+        href="nav/nav.css"
+    />
+    <link
+        rel="icon"
+        type="image/png"
+        href="images/favicon.png"
+    />
+</head>
     <body>
         <!-- GLOW ORBS -->
         <div class="orb orb-1"></div>
@@ -26,6 +118,7 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                                <li><a href="#timeline">Timeline</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -46,10 +139,8 @@
                     <img
                         src="images/profile.png"
                         alt="Yesin Arafat"
-                        onerror="
-                            this.src =
-                                'https://via.placeholder.com/150/38bdf8/ffffff?text=YA'
-                        "
+                        loading="eager"
+                        decoding="async"
                     />
                 </div>
 
@@ -169,6 +260,46 @@
                 <div class="divider-line"></div>
             </div>
 
+<section id="timeline">
+  
+  <div class="section">
+
+    <div class="section-label reveal">Journey</div>
+
+    <h2 class="section-title reveal" data-text="My Timeline">My Timeline</h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2024</span>
+          <h3>Started Web Development</h3>
+          <p>Began learning HTML, CSS, and JavaScript while exploring modern web design and frontend concepts.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2025</span>
+          <h3>Built First Real Projects</h3>
+          <p>Created responsive portfolio websites and started building reusable UI systems and interactive tools.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2026</span>
+          <h3>Full-Stack Learning Journey</h3>
+          <p>Learning backend technologies, databases, Node.js, and building complete web applications.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
             <!-- PROJECTS -->
             <section id="projects">
                 <div class="section">
@@ -192,7 +323,7 @@
                                 glassmorphism design.
                             </p>
                             <div class="project-links">
-                                <a href="#" target="_blank"
+                                <a href="#home" target="_blank"
                                     ><i class="fas fa-eye"></i> Live</a
                                 >
                                 <a href="#" target="_blank"
@@ -203,26 +334,40 @@
 
                         <div class="project-card reveal">
                             <div class="project-icon">
-                                <i class="fas fa-sticky-note"></i>
+                                <i class="fas fa-code"></i>
                             </div>
+
                             <h3>easycss</h3>
+
                             <div class="project-stack">
-                                <span class="stack-tag">JavaScript</span>
-                                <span class="stack-tag">LocalStorage</span>
+                                <span class="stack-tag">HTML</span>
                                 <span class="stack-tag">CSS</span>
+                                <span class="stack-tag">JavaScript</span>
                             </div>
+
                             <p>
-                                Custom note-taking app with local storage
-                                support, edit/delete functionality, and clean
-                                minimal UI.
+                                Lightweight CSS utility playground with live
+                                preview, customizable components, reusable
+                                styles, and modern UI tools for fast web design
+                                experimentation.
                             </p>
+
                             <div class="project-links">
-                                <a href="https://yesinwoow.github.io/easycss" target="_blank"
-                                    ><i class="fas fa-eye"></i> Live</a
+                                <a
+                                    href="https://yesinwoow.github.io/easycss"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
-                                <a href="#" target="_blank"
-                                    ><i class="fab fa-github"></i> Code</a
-                                >
+                                    <i class="fas fa-eye"></i> Live
+                                </a>
+
+<a
+    href="https://github.com/yesinwoow/easycss"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+    <i class="fab fa-github"></i> Code
+</a>
                             </div>
                         </div>
 
@@ -450,17 +595,14 @@
         <footer>
             <div class="footer-inner">
                 <div class="footer-logo">Yesin</div>
-                <p class="footer-copy">
-                    © 2026 Yesin Arafat. All rights reserved.
-                </p>
+                <small> © 2026 Yesin Arafat. All rights reserved. </small>
                 <div class="footer-status">
                     <span class="status-dot"></span>
                     Open to work
                 </div>
             </div>
         </footer>
-        <script src="JavaScript/script.js"></script>
-        <script src="script.js"></script>
+        <script src="js/script.js"></script>
         <script src="nav/nav.js"></script>
     </body>
 </html>

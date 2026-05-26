@@ -1,0 +1,429 @@
+/* ============================================================
+   TIMELINE.CSS — Optimized Cyberpunk Timeline
+   Better Performance + Smooth Mobile Rendering
+   ============================================================ */
+
+/* ─────────────────────────────
+   TIMELINE WRAPPER
+───────────────────────────── */
+
+.timeline {
+    position: relative;
+    padding-left: 52px;
+    margin-top: 16px;
+}
+
+/* vertical spine */
+.timeline::before {
+    content: '';
+    position: absolute;
+
+    left: 18px;
+    top: 0;
+    bottom: 0;
+
+    width: 1px;
+
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        #00f5ff 10%,
+        #00f5ff 90%,
+        transparent
+    );
+
+    box-shadow: 0 0 8px rgba(0, 245, 255, 0.35);
+}
+
+/* data stream */
+.timeline::after {
+    content: '';
+    position: absolute;
+
+    left: 17px;
+    top: -50px;
+
+    width: 2px;
+    height: 50px;
+
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        #39ff14,
+        transparent
+    );
+
+    opacity: 0.8;
+
+    pointer-events: none;
+
+    will-change: transform;
+
+    animation: tl-stream 6s linear infinite;
+}
+
+@keyframes tl-stream {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(calc(100% + 50px));
+    }
+}
+
+/* ─────────────────────────────
+   ITEM
+───────────────────────────── */
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 48px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* ─────────────────────────────
+   DOT
+───────────────────────────── */
+
+.timeline-dot {
+    position: absolute;
+
+    left: -41px;
+    top: 8px;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    border: 2px solid #00f5ff;
+    background: #03050d;
+
+    box-shadow:
+        0 0 6px rgba(0, 245, 255, 0.55),
+        inset 0 0 4px rgba(0, 245, 255, 0.18);
+
+    z-index: 2;
+}
+
+.timeline-dot::after {
+    content: '';
+    position: absolute;
+
+    inset: 3px;
+
+    border-radius: 50%;
+    background: #00f5ff;
+
+    opacity: 0.9;
+
+    will-change: transform, opacity;
+
+    animation: tl-pulse 2.2s ease-in-out infinite;
+}
+
+@keyframes tl-pulse {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+
+    50% {
+        transform: scale(0.65);
+        opacity: 0.3;
+    }
+}
+
+/* ─────────────────────────────
+   ACCENT COLORS
+───────────────────────────── */
+
+.timeline-item:nth-child(2) .timeline-dot {
+    border-color: #ff2d78;
+
+    box-shadow:
+        0 0 6px rgba(255, 45, 120, 0.5),
+        inset 0 0 4px rgba(255, 45, 120, 0.18);
+}
+
+.timeline-item:nth-child(2) .timeline-dot::after {
+    background: #ff2d78;
+}
+
+.timeline-item:nth-child(3) .timeline-dot {
+    border-color: #39ff14;
+
+    box-shadow:
+        0 0 6px rgba(57, 255, 20, 0.5),
+        inset 0 0 4px rgba(57, 255, 20, 0.18);
+}
+
+.timeline-item:nth-child(3) .timeline-dot::after {
+    background: #39ff14;
+}
+
+/* ─────────────────────────────
+   CARD
+───────────────────────────── */
+
+.timeline-content {
+    position: relative;
+
+    padding: 22px 24px 20px;
+
+    background: rgba(7, 13, 26, 0.92);
+
+    border: 1px solid rgba(0, 245, 255, 0.08);
+    border-left: 2px solid #00f5ff;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+
+    will-change: transform;
+}
+
+/* top glow line */
+.timeline-content::before {
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 1px;
+
+    background: linear-gradient(
+        to right,
+        #00f5ff,
+        transparent 70%
+    );
+
+    opacity: 0.4;
+}
+
+/* hover */
+.timeline-content:hover {
+    transform: translateY(-2px);
+
+    border-color: rgba(0, 245, 255, 0.2);
+
+    box-shadow:
+        0 0 10px rgba(0, 245, 255, 0.05);
+}
+
+/* ─────────────────────────────
+   CARD COLOR VARIANTS
+───────────────────────────── */
+
+.timeline-item:nth-child(2) .timeline-content {
+    border-left-color: #ff2d78;
+}
+
+.timeline-item:nth-child(2) .timeline-content::before {
+    background: linear-gradient(
+        to right,
+        #ff2d78,
+        transparent 70%
+    );
+}
+
+.timeline-item:nth-child(2) .timeline-content:hover {
+    border-color: rgba(255, 45, 120, 0.2);
+
+    box-shadow:
+        0 0 10px rgba(255, 45, 120, 0.05);
+}
+
+.timeline-item:nth-child(3) .timeline-content {
+    border-left-color: #39ff14;
+}
+
+.timeline-item:nth-child(3) .timeline-content::before {
+    background: linear-gradient(
+        to right,
+        #39ff14,
+        transparent 70%
+    );
+}
+
+.timeline-item:nth-child(3) .timeline-content:hover {
+    border-color: rgba(57, 255, 20, 0.2);
+
+    box-shadow:
+        0 0 10px rgba(57, 255, 20, 0.05);
+}
+
+/* ─────────────────────────────
+   DATE BADGE
+───────────────────────────── */
+
+.timeline-date {
+    display: inline-block;
+
+    margin-bottom: 10px;
+    padding: 4px 10px;
+
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    color: #00f5ff;
+
+    border: 1px solid rgba(0, 245, 255, 0.2);
+
+    background: rgba(0, 245, 255, 0.05);
+
+    text-shadow: 0 0 4px rgba(0, 245, 255, 0.4);
+}
+
+.timeline-item:nth-child(2) .timeline-date {
+    color: #ff2d78;
+
+    border-color: rgba(255, 45, 120, 0.2);
+
+    background: rgba(255, 45, 120, 0.05);
+
+    text-shadow: 0 0 4px rgba(255, 45, 120, 0.35);
+}
+
+.timeline-item:nth-child(3) .timeline-date {
+    color: #39ff14;
+
+    border-color: rgba(57, 255, 20, 0.2);
+
+    background: rgba(57, 255, 20, 0.05);
+
+    text-shadow: 0 0 4px rgba(57, 255, 20, 0.35);
+}
+
+/* ─────────────────────────────
+   HEADING
+───────────────────────────── */
+
+.timeline-content h3 {
+    margin-bottom: 10px;
+
+    font-family: 'Space Mono', monospace;
+    font-size: 0.95rem;
+    font-weight: 700;
+
+    color: #e8f4ff;
+
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* ─────────────────────────────
+   BODY TEXT
+───────────────────────────── */
+
+.timeline-content p {
+    font-family: 'Sora', sans-serif;
+
+    font-size: 0.85rem;
+    line-height: 1.75;
+
+    color: #6f8ea5;
+
+    letter-spacing: 0.015em;
+}
+
+/* ─────────────────────────────
+   GLITCH TITLE
+───────────────────────────── */
+
+#timeline .section-title {
+    position: relative;
+    display: inline-block;
+
+    animation: tl-glitch 14s infinite;
+}
+
+#timeline .section-title::after {
+    content: attr(data-text);
+
+    position: absolute;
+
+    left: 2px;
+    top: 2px;
+
+    color: #ff2d78;
+
+    opacity: 0.15;
+
+    z-index: -1;
+
+    pointer-events: none;
+}
+
+@keyframes tl-glitch {
+    0%,
+    95%,
+    100% {
+        transform: translateX(0);
+    }
+
+    96% {
+        transform: translateX(-2px);
+    }
+
+    97% {
+        transform: translateX(2px);
+    }
+
+    98% {
+        transform: translateX(0);
+    }
+}
+
+/* ─────────────────────────────
+   RESPONSIVE
+───────────────────────────── */
+
+@media (max-width: 480px) {
+    .timeline {
+        padding-left: 38px;
+    }
+
+    .timeline::before {
+        left: 12px;
+    }
+
+    .timeline::after {
+        left: 11px;
+    }
+
+    .timeline-dot {
+        left: -33px;
+
+        width: 15px;
+        height: 15px;
+    }
+
+    .timeline-content {
+        padding: 18px;
+    }
+
+    .timeline-content h3 {
+        font-size: 0.82rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.8rem;
+    }
+}
